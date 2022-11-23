@@ -168,5 +168,4 @@ Delete
 From mus m
 Where m.idMus in
       (Select rm.idRedundant
-       From RedundantMus rm
-       Where rm.status = 1);
+       From RedundantMus rm);
