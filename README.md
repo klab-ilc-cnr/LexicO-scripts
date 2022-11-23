@@ -31,19 +31,19 @@ $ vim app.cfg
 ```
 $ mysql -v -v -u USER -p simplelexicon < 01_Create_Redundant_Tables.sql
 ```
-7. Discovering rendunt Phonological Entries
+7. Discover rendundant Phonological Entries
 ```
 $ perl redundantPhu.pl
 ```
-8. Discovering rendunt Semantic Entries
+8. Discover rendundant Semantic Entries
 ```
 $ perl redundantUsemUsyns.pl -a usem
 ```
-9. Discovering rendunt Syntactic Entries
+9. Discover rendundant Syntactic Entries
 ```
 $ perl redundantUsemUsyns.pl -a usyn
 ```
-10. Discovering rendunt Morphologic Entries
+10. Discover rendundant Morphological Entries
 ```
 $ mysql -v -v -u USER -p simplelexicon < 02_Redundant_Morphological_Entries.sql
 ```
