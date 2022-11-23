@@ -45,7 +45,7 @@ $ perl redundantUsemUsyns.pl -a usyn
 ```
 10. Discovering rendunt Morphologic Entries
 ```
-$ mysql -v -v -u USER -p simplelexicon < 02_Redundants_Morphological_Entries.sql
+$ mysql -v -v -u USER -p simplelexicon < 02_Redundant_Morphological_Entries.sql
 ```
 11. Updating tables
 ```
