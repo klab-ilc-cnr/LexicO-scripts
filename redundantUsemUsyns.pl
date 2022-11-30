@@ -233,7 +233,7 @@ sub findUsemCanditateRedundant () {
 	open( $output, '>', $filename ) or die("Unable to create/open $filename");
     }
     print STDERR "status: " . $status . "\n" if ($DEBUG > 0);
-    my $sqlString = "SELECT DISTINCT a.idUsem, b.idUsem, a.idNum , b.idNum, a.naming ".
+    my $sqlString = "SELECT DISTINCT a.idUsem, b.idUsem, a.naming ".
 	"FROM usem a, usem b ".
 	"WHERE a.naming = b.naming ".
 	"AND a.pos = b.pos ";
@@ -258,9 +258,9 @@ sub findUsemCanditateRedundant () {
 
     $sth->execute() or die "execution failed: $dbh->errstr()";
     my $inserted = 0;
-    while (my ($idUsemA, $idUsemB, $idNumA, $idNumB, $naming) = $sth->fetchrow_array) {
+    while (my ($idUsemA, $idUsemB, $naming) = $sth->fetchrow_array) {
 
-	print STDERR ">> $naming, $idUsemA, $idUsemB, $idNumA, $idNumB\n" if ($DEBUG > 0);
+	print STDERR ">> $naming, $idUsemA, $idUsemB\n" if ($DEBUG > 0);
 	my @traitsA = &selectTraits($dbh, $idUsemA);
 	my @traitsB = &selectTraits($dbh, $idUsemB);
 
