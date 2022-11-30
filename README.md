@@ -19,7 +19,7 @@ $ tar xzf simplelexicon.sql.tar.gz | mysql -u root -proot < simplelexicon.sql
  ```
  cd Lexico-scripts
  ```
-4. copy app.cfg.stub in app.cfg<br>
+4. cp app-stub.cfg app.cfg<br>
 ```
 $ cp app.cfg.stub app.cfg
 ```
