@@ -19,9 +19,9 @@ $ tar xzf simplelexicon.sql.tar.gz | mysql -u root -proot < simplelexicon.sql
  ```
  cd Lexico-scripts
  ```
-4. cp app-stub.cfg app.cfg<br>
+4. Create the configuration file from the stub<br>
 ```
-$ cp app.cfg.stub app.cfg
+$ cp app-stub.cfg app.cfg
 ```
 5. Customize the app.cfg file with the proper values. In particular set the right value for ```dsn```, ```username``` and ```password```. Do not modify other variables.
 ```
