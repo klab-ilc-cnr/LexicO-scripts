@@ -13,7 +13,7 @@ This repository contains a collection of scripts (Perl and MySQL) used for autom
 1. First of all, download the PSC lexicon hosted at the Clarin-IT Repository [Download](https://dspace-clarin-it.ilc.cnr.it/repository/xmlui/bitstream/handle/20.500.11752/ILC-88/simplelexicon.sql.tar.gz?sequence=1&isAllowed=y)
 2. Import the downloaded dump in a MySQL server.
 ```
-$ gunzip simplelexicon.dump.gz | mysql -u USER -p < simplelexicon.dump
+$ tar xzf simplelexicon.sql.tar.gz | mysql -u root -proot < simplelexicon.sql
 ```
 3. After cloning the repository move to the LexicO-scripts directory 
  ```
