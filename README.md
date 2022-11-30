@@ -4,24 +4,24 @@ This repository contains a collection of scripts (Perl and MySQL) used for autom
 ## Requirements
 * MySQL Server and Client (version >= 5.6)
 * Perl
-* Perl Config::Simple
-* Perl DBI
-* Perl Getopt::Std
+* Perl Config::Simple (```cpan install Config::Simple.pm```)
+* Perl DBI (```cpan install DBI```)
+* Perl Getopt::Std (```cpan install Getopt::Std```)
 
 ## Steps to create the LexicO lexicon
 
 1. First of all, download the PSC lexicon hosted at the Clarin-IT Repository [Download](https://dspace-clarin-it.ilc.cnr.it/repository/xmlui/bitstream/handle/20.500.11752/ILC-88/simplelexicon.sql.tar.gz?sequence=1&isAllowed=y)
 2. Import the downloaded dump in a MySQL server.
 ```
-$ gunzip simplelexicon.dump.gz | mysql -u USER -p < simplelexicon.dump
+$ tar xzf simplelexicon.sql.tar.gz | mysql -u root -proot < simplelexicon.sql
 ```
 3. After cloning the repository move to the LexicO-scripts directory 
  ```
  cd Lexico-scripts
  ```
-4. copy app.cfg.stub in app.cfg<br>
+4. Create the configuration file from the stub<br>
 ```
-$ cp app.cfg.stub app.cfg
+$ cp app-stub.cfg app.cfg
 ```
 5. Customize the app.cfg file with the proper values. In particular set the right value for ```dsn```, ```username``` and ```password```. Do not modify other variables.
 ```
