@@ -4,9 +4,9 @@ This repository contains a collection of scripts (Perl and MySQL) used for autom
 ## Requirements
 * MySQL Server and Client (version >= 5.6)
 * Perl
-* Perl Config::Simple
-* Perl DBI
-* Perl Getopt::Std
+* Perl Config::Simple (```cpan install Config::Simple.pm```)
+* Perl DBI (```cpan install DBI```)
+* Perl Getopt::Std (```cpan install Getopt::Std```)
 
 ## Steps to create the LexicO lexicon
 
