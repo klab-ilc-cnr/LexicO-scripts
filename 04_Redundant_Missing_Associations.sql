@@ -1,6 +1,3 @@
-/*
- * @author Simone Marchi <simone.marchi(at)ilc.cnr.it>
- */
 ###
 ### Rimozione duplicati in USEMREL (#10)
 ###
