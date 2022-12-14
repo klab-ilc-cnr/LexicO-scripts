@@ -72,7 +72,7 @@ AND not exists (select 1
                and ur2.idRSem = "R113" );
                
 ###              
-### R71 - Isamemberof without hasasmember (#531)
+### R71 - Isamemberof without hasasmember (#529)
 ###
 INSERT INTO usemrel
 (pos, idUsem, template, idRSem, idUsemTarget, comment, weighting)
