@@ -1,5 +1,5 @@
 # LexicO-scripts
-This repository contains a collection of scripts (Perl and MySQL) used for automatic discovery, marking and removing of candidate redundant entries in the Parole-Simple-Clips computational lexicon in order to create LexicO computational lexicon. This work is part of the paper "[LexicO: an Italian Computational Lexicon derived from Parole-Simple-Clips](http://www)" published in ...
+This repository contains a collection of scripts (Perl and MySQL) used for automatic discovery, marking and removing of candidate redundant entries in the Parole-Simple-Clips computational lexicon in order to create LexicO computational lexicon. 
 
 ## Requirements
 * MySQL Server and Client (version >= 5.6)
