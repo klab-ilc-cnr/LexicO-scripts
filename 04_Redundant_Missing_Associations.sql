@@ -20,7 +20,7 @@ WHERE ID IN (
 delete 
 from usemrel u 
 where u.idRSem = "R192" AND 
-u.idUsem = u.idUsemTarget 
+u.idUsem = u.idUsemTarget;
 
 #R192 - sinonimia: Usemrel mancanti per simmetria (#1645)
 INSERT INTO usemrel
@@ -52,7 +52,7 @@ AND not exists (select 1
                from usemrel ur2
                where ur.idUsem = ur2.idUsemTarget
                and ur.idUsemTarget = ur2.idUsem
-               and ur2.idRSem = "R23" )
+               and ur2.idRSem = "R23" );
             
 ###
 ### R23 - hasaspart without ispartof (#1364)
@@ -69,9 +69,11 @@ AND not exists (select 1
                from usemrel ur2
                where ur.idUsem = ur2.idUsemTarget
                and ur.idUsemTarget = ur2.idUsem
-               and ur2.idRSem = "R113" )
+               and ur2.idRSem = "R113" );
                
-#R71 - Isamemberof without hasasmember (#531)
+###              
+### R71 - Isamemberof without hasasmember (#531)
+###
 INSERT INTO usemrel
 (pos, idUsem, template, idRSem, idUsemTarget, comment, weighting)
 select  u.pos, ur.idUsemTarget , t.template , "R48", ur.idUsem, "", NULL
@@ -84,7 +86,7 @@ AND not exists (select 1
                from usemrel ur2
                where ur.idUsem = ur2.idUsemTarget
                and ur.idUsemTarget = ur2.idUsem
-               and ur2.idRSem = "R48" )  
+               and ur2.idRSem = "R48" ); 
                
 ###
 ### R48 - Hasasmember whitout Isamemberof (#678)
@@ -101,4 +103,4 @@ AND not exists (select 1
                from usemrel ur2
                where ur.idUsem = ur2.idUsemTarget
                and ur.idUsemTarget = ur2.idUsem
-               and ur2.idRSem = "R71" )            
+               and ur2.idRSem = "R71" );            
