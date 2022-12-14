@@ -51,3 +51,7 @@ $ mysql -v -v -u USER -p simplelexicon < 02_Redundant_Morphological_Entries.sql
 ```
 $ mysql -v -v -u USER -p simplelexicon < 03_Update_Tables.sql
 ```
+12. Discover redundant and missing associations
+```
+$ mysql -v -v -u USER -p simplelexicon < 04_Redundant_Missing_Associations.sql
+```
