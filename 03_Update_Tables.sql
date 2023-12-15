@@ -13,19 +13,19 @@ And r.idRedundantOf not in
 From RedundantPhu rp);       
 
 /* 
- * 2 - MUSPHU linked to redundant MUS (status = 1) (#71)
+ * 2 - MUSPHU linked to redundant MUS (status = 2) (#5)
  */
 Update musphu mp, RedundantMus r
 Set mp.idMus = r.idRedundantOf
 Where mp.idMus = r.idRedundant
-And r.status = 1
+And r.status = 2
 and mp.idMus not in
       (Select rm.idRedundantOf
-From RedundantMus rm
-where rm.status = 1);
+         From RedundantMus rm
+         where rm.status = 2);
 
 /*
- * 3 - Duplicated MUSPHU (idKey excluded) (#38)
+ * 3 - Duplicated MUSPHU (idKey excluded) (#39)
  */       
 Delete 
 From musphu m
@@ -153,19 +153,22 @@ Where u.idUsyn in
        Where status = 15);          
 
 /*
- * 14 - Update usyn ponting to removed mus (status  1 and 2) (#1168)
+ * 14 - Update usyn ponting to removed mus (status 2) (#1129)
  */
 
 Update usyns mp,
        RedundantMus r
 Set mp.idUms  = r.idRedundantOf
-Where mp.idUms  = r.idRedundant;
+Where mp.idUms  = r.idRedundant
+and r.status = 2;
       
 /*
- * 15 - Remove redundant mus (status = 1) (#37)
+ * 15 - Remove redundant mus (status = 2) (#944)
  */
 Delete
 From mus m
 Where m.idMus in
       (Select rm.idRedundant
-       From RedundantMus rm);
+       From RedundantMus rm
+       where rm.status = 2
+       );
